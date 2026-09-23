@@ -70,3 +70,13 @@
 - สิ่งที่เกือบต้องเดาแต่ถามแทน: ไม่มี เพราะ task นี้ชัดเจนจาก spec.md, plan.md และ tasks.md ทั้งหมด
 
 ---
+
+## [2026-09-23] [08:29] คำสั่ง: /implement T-09
+
+- เครื่องมือ: Copilot ใน Codespaces
+- ไฟล์ที่แก้: frontend/src/pages/SlotPicker.jsx, frontend/src/__tests__/T-09-slot-picker.test.jsx
+- ผล test: `cd frontend && npm install && npm test -- --run src/__tests__/T-09-slot-picker.test.jsx`
+- ผลลัพธ์: 1 test ผ่าน (`1 passed (1)`) 
+- สิ่งที่เกือบต้องเดาแต่ถามแทน: ไม่มี เพราะ requirement ของ T-09 ชัดเจนว่าต้องใช้ API จำลองและแสดงช่วงเวลาพร้อมจำนวนที่นั่งคงเหลือในหน้า UI
+
+---
