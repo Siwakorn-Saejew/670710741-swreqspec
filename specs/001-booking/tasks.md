@@ -13,7 +13,7 @@
 - ไฟล์ที่แตะ: backend/app/db/models.py, backend/app/db/session.py, backend/app/db/migrations/001_init.py, backend/app/config.py
 - ต้องทำหลัง: ไม่มี
 - เสร็จเมื่อ: migration สร้างตาราง slots, bookings, audit_logs พร้อมใช้ PostgreSQL ในระบบจริง และ SQLite ใน test ได้
-- สถานะ: พร้อมทำ
+- สถานะ: เสร็จ รอทีมตรวจ
 
 ### T-02 ตรวจสิทธิ์ยืนยันตัวตนและค้น HN จาก HIS ก่อนทำ booking
 - รองรับ: IF-IDP-01, IF-HIS-01

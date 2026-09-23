@@ -60,3 +60,13 @@
 - ข้อสังเกต: ทีมยังไม่ได้เริ่มทำ task ใด ๆ จนกว่าจะมีคำสั่งต่อไป
 
 ---
+
+## [2026-09-23] [10:13] คำสั่ง: /implement T-01
+
+- เครื่องมือ: Copilot ใน Codespaces
+- ไฟล์ที่แก้: backend/app/db/models.py, backend/app/db/session.py, backend/app/db/migrations/001_init.py, backend/app/config.py
+- ผล test: `cd backend && pytest tests/test_T01_db_schema.py -q`
+- ผลลัพธ์: 1 test ผ่าน (`1 passed in 0.62s`)
+- สิ่งที่เกือบต้องเดาแต่ถามแทน: ไม่มี เพราะ task นี้ชัดเจนจาก spec.md, plan.md และ tasks.md ทั้งหมด
+
+---
