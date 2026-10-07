@@ -18,7 +18,7 @@ def list_available_slots(db: Session, package_code: str, date_from: date | None 
         select(Slot)
         .where(Slot.package_code == package_code)
         .where(Slot.slot_date >= start, Slot.slot_date <= end)
-        .where(Slot.remaining > 0)
+        #.where(slot.remaining = 0)
         .order_by(Slot.slot_date, Slot.start_time)
     )
     return list(db.scalars(stmt))
