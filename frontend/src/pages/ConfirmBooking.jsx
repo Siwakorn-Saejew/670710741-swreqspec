@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 export default function ConfirmBooking({ api, slot, onDone, onBack }) {
-  const [full, setFull] = useState(null)   // ผลเมื่อช่วงเวลาเต็ม (409)
+  const [full, setFull] = useState(null)    //ผลเมื่อช่วงเวลาเต็ม (409)
   const [booking, setBooking] = useState(null)
   const [cancelled, setCancelled] = useState(false)
 
@@ -12,7 +12,7 @@ export default function ConfirmBooking({ api, slot, onDone, onBack }) {
     else { setBooking(res.body); onDone?.(res.body) }
   }
 
-  // ยกเลิกการจอง เผื่อผู้ใช้กดจองผิด (FR-BKG-04)
+   //ยกเลิกการจอง เผื่อผู้ใช้กดจองผิด (FR-BKG-04)
   async function cancel() {
     await api.cancelBooking({ bookingId: booking.booking_id })
     setCancelled(true)
