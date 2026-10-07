@@ -69,3 +69,20 @@
 - เครื่องมือ: Copilot ใน Codespaces (Agent, Auto)
 - ผลลัพธ์: AC-BKG-01 มีแถวสถานะ "ใช้ได้" แล้ว จึงเขียน test ใน [backend/tests/test_AC_BKG_01.py](/workspaces/670710741-swreqspec/backend/tests/test_AC_BKG_01.py) ตาม 3 แถวที่ตรวจแล้ว
 - เนื้อหา test: ทางปกติ / ขอบ / ทางผิด (ยืนยันตัวตนไม่ครบ) โดยยึด IF-IDP-01 และ spec ที่มีอยู่
+
+---
+
+## 2569-10-07 08:31 คำสั่ง: /verify specs/001-booking/
+
+- เครื่องมือ: Copilot ใน Codespaces (Agent, Auto)
+- ผลลัพธ์: รัน test backend 6 ตัวผ่าน, frontend 1 ตัวผ่าน; สร้าง [specs/001-booking/rtm.md](/workspaces/670710741-swreqspec/specs/001-booking/rtm.md) พร้อมข้อค้นพบ 5 ข้อ
+- สรุปสถานะ: ตารางไปข้างหน้าคือ ครบ 5 แถว, ยังไม่ถึง 7 แถว, รอ 0 แถว, ช่องโหว่ 3 แถว
+- ข้อค้นพบที่สำคัญ: FR-BKG-06 ไม่มี AC; ตัวเลข 30 วันถูกกำหนดเป็น 14 วัน; ไม่มี queue retry / audit log middleware อย่างเป็นจริง
+
+---
+
+## 2569-10-07 08:38 คำสั่ง: ลบ endpoint และ cancel_booking ที่เป็นของแถมใน Out of scope
+
+- เหตุผล: ทีมระบุว่า endpoint ยกเลิกการจองเป็น UC-02 ซึ่งอยู่ใน Out of scope ของ specs/001-booking/spec.md
+- ผลลัพธ์: ลบ DELETE /bookings/{booking_id} จาก backend/app/booking/router.py และลบฟังก์ชัน cancel_booking จาก backend/app/booking/service.py
+- การตรวจสอบ: ค้นหาไม่พบการเรียกใช้งานอื่นของ endpoint หรือฟังก์ชันดังกล่าวก่อนลบ
